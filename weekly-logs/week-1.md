@@ -93,6 +93,28 @@ Commands explored:
 - git checkout -b feature-name
 - git push origin branch-name
 
+# Rebase vs Merge
+
+## What I Thought Earlier
+I thought both were same.
+
+## What I Learned
+Merge creates extra merge commits.
+Rebase rewrites history cleanly.
+
+## Why OSS Maintainers Prefer Rebase
+- cleaner history
+- easier review
+- linear commit structure
+
+## Real Example
+While working on AegisAI PR #495, my branch conflicted with PR #480 and #490.
+I used:
+
+git rebase upstream/main
+
+to replay my commit on latest main.
+
 ## Next Focus Areas
 
 - backend security
@@ -102,3 +124,4 @@ Commands explored:
 - observability
 - systems programming
 - secure API design
+
